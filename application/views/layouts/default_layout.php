@@ -13,26 +13,34 @@
 	
 	<!-- page specific plugin styles -->
 </head>
+
  
+
 <body class="no-skin">
+
+
 <div id="navbar" class="navbar navbar-default">
 
 </div>
-
+<center>
 <div class="page-content">
    
+
 <div class="row">
 
-    <div class="col-lg-6">
 
-    </div>
     <div class="col-lg-6">
+    	
 					<!-- PAGE CONTENT BEGINS -->
 									<?php echo $contents;?>
 					<!-- PAGE CONTENT ENDS -->
+					
 	</div><!-- /.col -->
+
+
 </div><!-- /.row -->
 </div><!-- /.page-content -->
+</center>
 </div>
 </div><!-- /.main-content -->
 
@@ -50,9 +58,10 @@
 <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
 </a>
 </div><!-- /.main-container -->
- 
+
 <!-- basic scripts -->
 <script type="text/javascript" src="<?php echo base_url();?>assets/scripts/jquery-3.3.1.min.js"></script>
 <script src="<?php echo base_url();?>assets/scripts/bootstrap.js"></script>
+
 </body>
 </html>
