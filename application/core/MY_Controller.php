@@ -122,7 +122,6 @@ class MY_Controller extends CI_Controller {
         
     } 
 
-
     public function _sendMail($toEmail, $subject, $message) { 
   
         $config = Array(
@@ -159,7 +158,6 @@ class MY_Controller extends CI_Controller {
         }
      } 
 
-
      public function _insertToken($id) {
         $token = substr(sha1(rand()), 0, 30); 
         $date = date('Y-m-d');
@@ -175,6 +173,21 @@ class MY_Controller extends CI_Controller {
         $token = $token . $id;
         $qstring = $this->_base64urlEncode($token);                      
         return $qstring;
+     }
+     
+
+public function _sendSMS() {
+        $NEXMO_API_KEY =  'bae73eb5';
+        $NEXMO_API_SECRET = 'sNaGFNLigpa5h1OF';
+        $basic  = new \Nexmo\Client\Credentials\Basic($NEXMO_API_KEY, $NEXMO_API_SECRET);
+        $client = new \Nexmo\Client($basic);
+
+        $TO_NUMBER = '639497980805';
+        $message = $client->message()->send([
+            'to' =>'639497980805',
+            'from' => 'Web App',
+            'text' => 'Your Account has been Verified'
+        ]);        
      }
 
 }
